@@ -19,7 +19,7 @@ const Home = () => {
                 <div
                     className="container"
                     style={{
-                        backgroundColor: 'rgba(0, 0, 0, 0.5)', // Optional: darken background for better text contrast
+                        backgroundColor: 'rgba(35, 35, 35, 0.5)', // Optional: darken background for better text contrast
                         padding: '2rem',
                         borderRadius: '10px',
                     }}
