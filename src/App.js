@@ -9,7 +9,7 @@ const App = () => {
   return (
     <Router>
       <div className="d-flex flex-column min-vh-100">
-        <nav className="navbar navbar-expand-lg navbar-dark bg-body-tertiary " data-bs-theme="dark">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-body-tertiary px-3 sticky-top" data-bs-theme="dark">
           <div className="container-fluid">
             <Link className="navbar-brand" to="/">Bike Rental</Link>
 
