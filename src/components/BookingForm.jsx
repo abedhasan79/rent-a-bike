@@ -4,6 +4,9 @@ import { DateRangePicker } from 'rsuite';
 // import { BsCalendar2MonthFill } from 'react-icons/bs';
 import 'rsuite/DateRangePicker/styles/index.css';
 
+const {  beforeToday } =
+  DateRangePicker;
+
 const BookingForm = ({ bike }) => {
     const [formData, setFormData] = useState({
         name: '',
@@ -79,9 +82,9 @@ from ${formData.startDateTime} to ${formData.endDateTime} has been received!`);
                 </div>
 
                 <div className="mb-3">
-                    <label className="form-label">Booking Date</label>
+                    <label className="form-label">Please select booking <b>date and time</b>:</label>
                     <>
-                        <DateRangePicker format="MM/dd/yyyy HH:mm" block
+                        <DateRangePicker shouldDisableDate={beforeToday()} format="MM/dd/yyyy HH:mm" block
                             onChange={handleDateRangeChange}
                             placeholder="Select date and time range"
                         />
@@ -90,6 +93,15 @@ from ${formData.startDateTime} to ${formData.endDateTime} has been received!`);
 
                 <button type="submit" className="btn btn-success">Book Now</button>
             </form>
+
+            <div className="my-5">
+                <h3>What Happens Next</h3>
+                <ul className="list-unstyled">
+                    <li className="mb-2">✔️ You’ll receive a confirmation within 2 hours regarding the availability of your selected dates.</li>
+                    <li className="mb-2">✔️ Once availability is confirmed, you’ll be required to send an e-transfer (10$ per day for each bike) within 8 hours to secure your booking.</li>
+                    <li className="mb-2">✔️ After payment is received, your booking will be officially confirmed. You may then pick up the bike on your scheduled date and time.</li>
+                </ul>
+            </div>
         </div>
     );
 };
