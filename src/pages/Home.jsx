@@ -66,7 +66,7 @@ const Home = () => {
                         </ul>
 
                         <div className="">
-                            <button className="btn btn-success mt-3">Book a Bike</button>
+                            <Link to="/book" className="btn btn-success mt-3">Book a Bike</Link>
                         </div>
 
                     </div>

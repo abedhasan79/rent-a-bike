@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { DateRangePicker } from 'rsuite';
 // import { FaCalendar, FaClock } from 'react-icons/fa';
 // import { BsCalendar2MonthFill } from 'react-icons/bs';
@@ -54,8 +55,11 @@ const BookingForm = ({ bike }) => {
             <h2 className="mb-4">Book Bicycle for a Day or More</h2>
             <form ref={form} onSubmit={handleSubmit} className="border p-4 rounded shadow-sm bg-light">
                 {formSubmitted ? (
+                    <>
+                        <p> Thank you for your message! I will get back to you soon.</p>
+                        <Link to="/" className="btn btn-success mt-3">Back</Link>
+                    </>
 
-                    <p> Thank you for your message! I will get back to you soon.</p>
 
                 ) : (
                     <div>
