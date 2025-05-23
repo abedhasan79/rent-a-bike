@@ -47,7 +47,7 @@ const Home = () => {
                 <div className="row align-items-center">
                     <div className="col-md-6">
                         <img
-                            src="/images/b1.jpeg"
+                            src="/images/b1.jpg"
                             alt="Bike"
                             className="img-fluid rounded shadow-sm"
                         />
