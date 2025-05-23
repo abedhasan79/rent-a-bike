@@ -1,16 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import BookingPage from './pages/BookingPage';
 import Footer from './components/Footer';
 
 const App = () => {
+
+  useEffect(() => {
+    document.title = "Rent A Bike";
+  }, []);
+
   return (
     <Router>
       <div className="d-flex flex-column min-vh-100">
         <nav className="navbar navbar-expand-lg navbar-dark bg-body-tertiary px-3 sticky-top" data-bs-theme="dark">
           <div className="container-fluid">
-            <Link className="navbar-brand" to="/">Bike Rental</Link>
+            <Link className="navbar-brand" to="/">Rent A Bike</Link>
 
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
               <span className="navbar-toggler-icon"></span>

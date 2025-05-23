@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import Trail from '../components/Trail';
+import b1 from '../b1.jpg';
 
 const Home = () => {
     return (
@@ -24,7 +25,7 @@ const Home = () => {
                         borderRadius: '10px',
                     }}
                 >
-                    <h1 className="display-4 fw-bold">Welcome to Bike Rental</h1>
+                    <h1 className="display-4 fw-bold">Welcome to Rent A Bike</h1>
                     <p className="lead mt-3">
                         Explore the city with eco-friendly and affordable bikes from our Albro Lake location <span className="fs-1 fw-bold">only 10$ a day!</span>
                     </p>
@@ -47,7 +48,7 @@ const Home = () => {
                 <div className="row align-items-center">
                     <div className="col-md-6">
                         <img
-                            src="/images/b1.jpg"
+                            src={b1}
                             alt="Bike"
                             className="img-fluid rounded shadow-sm"
                         />

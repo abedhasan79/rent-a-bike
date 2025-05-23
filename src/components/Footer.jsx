@@ -45,7 +45,7 @@ const Footer = () => {
 
 
                 <hr className="bg-white my-3" />
-                <p className="mb-0">&copy; {new Date().getFullYear()} Bike Rental — All rights reserved.</p>
+                <p className="mb-0">&copy; {new Date().getFullYear()} Rent A Bike — All rights reserved.</p>
             </div>
         </footer >
     );
