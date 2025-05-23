@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
-import BikeList from "./pages/BikeList";
 import BookingPage from './pages/BookingPage';
 import Footer from './components/Footer';
 
