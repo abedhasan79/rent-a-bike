@@ -36,8 +36,8 @@ const Footer = () => {
                     {/* Contact Info */}
                     <div className="col-md-4">
                         <h5>Contact Us</h5>
-                        <p className="mb-1">📞 <a href="tel:+1234567890" className="text-white text-decoration-none">+1 (234) 567-890</a></p>
-                        <p>📧 <a href="mailto:info@bikerental.com" className="text-white text-decoration-none">info@bikerental.com</a></p>
+                        <p className="mb-1">📞 <a href="tel:+19024145894" className="text-white text-decoration-none">+1 (902) 414-5894</a></p>
+                        <p>📧 <a href="mailto:info.rent.bikes@gmail.com" className="text-white text-decoration-none">info.rent.bikes@gmail.com</a></p>
                     </div>
 
 
