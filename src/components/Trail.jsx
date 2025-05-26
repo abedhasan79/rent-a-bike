@@ -29,44 +29,48 @@ const trails = [
 
 const Trail = () => {
   return (
-    <div className="row justify-content-center ">
-      {trails.map((trail, index) => (
-        <div className="col-md-4 px-3" key={index}>
-          <div className="card h-100 shadow-sm mx-2">
-            <div id={`carousel-${index}`} className="carousel slide" data-bs-ride="carousel">
-              <div className="carousel-inner ">
-                {trail.image.map((img, i) => (
-                  <div className={`carousel-item ${i === 0 ? 'active' : ''}`} key={i}>
-                    <img src={img} style={{ width: "20vh", height: "20vh" }} className="d-block w-100" alt={`${trail.title} ${i + 1}`} />
+    <div className="d-flex justify-content-center mb-4">
+      <div  style={{ width: "100vh" }}>
+        <div className="row justify-content-center">
+          {trails.map((trail, index) => (
+            <div className="col-md-4 px-3" key={index}>
+              <div className="card h-100 shadow-sm mx-2">
+                <div id={`carousel-${index}`} className="carousel slide" data-bs-ride="carousel">
+                  <div className="carousel-inner ">
+                    {trail.image.map((img, i) => (
+                      <div className={`carousel-item ${i === 0 ? 'active' : ''}`} key={i}>
+                        <img src={img} style={{ width: "20vh", height: "20vh" }} className="d-block w-100" alt={`${trail.title} ${i + 1}`} />
+                      </div>
+                    ))}
                   </div>
-                ))}
+                  <button
+                    className="carousel-control-prev"
+                    type="button"
+                    data-bs-target={`#carousel-${index}`}
+                    data-bs-slide="prev"
+                  >
+                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    className="carousel-control-next"
+                    type="button"
+                    data-bs-target={`#carousel-${index}`}
+                    data-bs-slide="next"
+                  >
+                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Next</span>
+                  </button>
+                </div>
+                <div className="card-body">
+                  <h5 className="card-title">{trail.title}</h5>
+                  <p className="card-text">{trail.description}</p>
+                </div>
               </div>
-              <button
-                className="carousel-control-prev"
-                type="button"
-                data-bs-target={`#carousel-${index}`}
-                data-bs-slide="prev"
-              >
-                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span className="visually-hidden">Previous</span>
-              </button>
-              <button
-                className="carousel-control-next"
-                type="button"
-                data-bs-target={`#carousel-${index}`}
-                data-bs-slide="next"
-              >
-                <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                <span className="visually-hidden">Next</span>
-              </button>
             </div>
-            <div className="card-body">
-              <h5 className="card-title">{trail.title}</h5>
-              <p className="card-text">{trail.description}</p>
-            </div>
-          </div>
+          ))}
         </div>
-      ))}
+      </div>
     </div>
   );
 };
